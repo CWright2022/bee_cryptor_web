@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>The Bee-Cryptor</title>
+</head>
+
+<body>
+    <h1>Bee-Cryptor</h1>
+    <h2>Use the encryption standard of the future that's got everyone buzzing!</h2>
+    <hr>
+    <form action="{{url_for("handle")}}" method="post" id="text_form">
+        <label for="text_box">Text to Encrypt</label><br>
+        <textarea id="text_box" name="message" rows="5" cols="56" placeholder="enter text here..." form="text_form"
+            maxlength="280" required></textarea><br>
+        <button id="submit_button" type="submit">Encrypt!</button><br>
+</body>
+
+</html>

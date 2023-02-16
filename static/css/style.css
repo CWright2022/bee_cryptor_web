@@ -1,0 +1,35 @@
+h1 {
+    border: 2px #eee solid;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+#text_form {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    /* background-color: black; */
+    background-color: white;
+}
+
+
+#text_box {
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#submit_button {
+    width: 20em;
+    height: 4em;
+}
+
+p {
+    text-align: center;
+}
