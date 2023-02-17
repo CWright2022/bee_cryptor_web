@@ -13,9 +13,13 @@
     <hr>
     <form action="{{url_for("handle")}}" method="post" id="text_form">
         <label for="text_box">Text to Encrypt</label><br>
-        <textarea id="text_box" name="message" rows="5" cols="56" placeholder="enter text here..." form="text_form"
+        <textarea id="text_box" name="text" rows="5" cols="56" placeholder="enter text here..." form="text_form"
             maxlength="280" required></textarea><br>
-        <button id="submit_button" type="submit">Encrypt!</button><br>
+        <input type="radio" id="encrypt" name="chooser" value="encrypt">
+        <label for="encrypt">Encrypt</label><br>
+        <input type="radio" id="decrypt" name="chooser" value="decrypt">
+        <label for="decrypt">Decrypt</label><br>
+        <button id="submit_button" type="submit">Go!</button><br>
 </body>
 
 </html>
