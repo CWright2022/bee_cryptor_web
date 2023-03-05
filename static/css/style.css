@@ -23,6 +23,8 @@ body {
     white-space: pre-wrap;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 200px;
 }
 
 #submit_button {
