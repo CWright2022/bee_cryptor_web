@@ -7,6 +7,10 @@ from flask import Flask, request, render_template, redirect, url_for
 
 from bee_cryptor import encrypt, decrypt
 
+import logging
+
+logging.basicConfig(filename="bc.log", encoding="utf-8", level=logging.DEBUG)
+
 app = Flask(__name__)
 
 OUTPUT_TEXT = ""
@@ -15,6 +19,8 @@ OUTPUT_TEXT = ""
 @app.route('/', methods=["GET", "POST"])
 def handle():
     global OUTPUT_TEXT
+    logging.info("new connection from: {0}").format(request.environ.get("HTTP_X_REAL_IP", request.remote_addr))
+    logging.info("user agent: {0}".format(request.remote_user))
     if request.method == "GET":
         return render_template("index.html")
     elif request.method == "POST":
