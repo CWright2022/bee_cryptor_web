@@ -38,7 +38,10 @@ def handle():
 
 @app.route("/success")
 def success():
-    return render_template('success.html', output_text=OUTPUT_TEXT)
+    global OUTPUT_TEXT
+    use_this_text = OUTPUT_TEXT
+    OUTPUT_TEXT = ""
+    return render_template('success.html', output_text=use_this_text)
 
 
 if __name__ == "__main__":
